@@ -7,6 +7,8 @@
 
 One to two paragraph statement about your product and what it does.
 
+![Example preview](http://via.placeholder.com/700x400?text=Example+preview)
+
 ![](header.png)
 
 ## Installation
