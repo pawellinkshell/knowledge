@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 # Software engineering sources of knowledge
 Repository which contains my own policies, thoughts, philosophy about software development.
 
