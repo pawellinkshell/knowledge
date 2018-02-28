@@ -5,11 +5,29 @@
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
 
+TODO(Pawel): add `build` badge
+
+TODO(Pawel): add `coverage` badge
+
+TODO(Pawel): add `active` badge
+
+TODO(Pawel): add `version` badge
+
+[![Code guide](https://img.shields.io/badge/code%20guide-twitter%20common-green.svg)](https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md)
+
 One to two paragraph statement about your product and what it does.
 
 ![Example preview](http://via.placeholder.com/700x400?text=Example+preview)
 
 ![](header.png)
+
+## TODO(Pawel): Change name `Code rules` into porper one
+[![Code style](https://img.shields.io/badge/code%20style-google-yellow.svg)](https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml)
+
+TODO(Pawel): add `dependencies` badge
+
+TODO(Pawel): add `devDependencies` badge
+
 
 ## Installation
 
@@ -55,21 +73,23 @@ npm test
 * 0.0.1
     * Work in progress
 
-## Meta
-
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
-
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
-
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
+1. Fork it (<https://github.com/pawellinkshell/yourproject/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+See also the list of [contributors](https://github.com/pawellinkshell/BoxstarterWithChoco/contributors) who participated in this project.  
+
+## Copyrights
+
+[![Copyright 2018](https://img.shields.io/badge/copyright%202018-Pawel%20Linkshell-lightgrey.svg?longCache=true&style=for-the-badge)](https://github.com/pawellinkshell)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?longCache=true&style=for-the-badge)](https://github.com/pawellinkshell/knowledge/blob/master/templates/LICENSE)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Conduct](https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-5e0c73.svg?longCache=true&style=for-the-badge)](https://github.com/pawellinkshell/knowledge/blob/master/templates/CODE_OF_CONDUCT.md)
+
+
 
 <!-- Markdown link & img dfn's -->
 [npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
