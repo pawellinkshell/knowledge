@@ -94,11 +94,11 @@ npm test
 
 <!-- Release History -->
 [release-history-image]: https://img.shields.io/badge/Release-ME-blue.svg?longCache=true&style=flat-square
-[release-history-url]: ../../../wiki/Release-History
+[release-history-url]: ../../wiki/Release-History
 
 <!-- Contributing -->
 [contribute-me-image]: https://img.shields.io/badge/Contribute-ME-blue.svg?longCache=true&style=flat-square
-[contribute-me-url]: ../../../wiki/Contributing
+[contribute-me-url]: ../../wiki/Contributing
 
 <!-- Copyrights -->
 [pawel-linkshell-image]: https://img.shields.io/badge/copyright%202018-Pawel%20Linkshell-lightgrey.svg?longCache=true&style=for-the-badge
@@ -108,7 +108,5 @@ npm test
 [code-of-conduct-image]: https://img.shields.io/badge/code%20of%20conduct-contributor%20covenant-5e0c73.svg?longCache=true&style=for-the-badge
 [code-of-conduct-url]: https://github.com/pawellinkshell/knowledge/blob/master/templates/CODE_OF_CONDUCT.md
 
-<!-- CHANGE ME into relative-->
 [license-image]: https://img.shields.io/badge/License-MIT-yellow.svg?longCache=true&style=for-the-badge
-[license-url]: https://github.com/pawellinkshell/knowledge/blob/master/templates/LICENSE
-
+[license-url]: ../../blob/master/LICENSE
