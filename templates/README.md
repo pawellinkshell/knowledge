@@ -19,17 +19,18 @@ One to two paragraph statement about your product and what it does.
 
 ![Example preview][example-preview]
 
-![](header.png)
-
-## TODO(Pawel): Change name `Code rules` into porper one
+## Getting started
 [![Code style][code-style-image]][code-style-url]
 
 TODO(Pawel): add `dependencies` badge
 
 TODO(Pawel): add `devDependencies` badge
 
+Few sentences how to start work with your code on local machine
 
-## Installation
+### Requirements
+
+### Installation
 
 OS X & Linux:
 
@@ -60,9 +61,12 @@ npm test
 
 ## Release History
 
+Do you want to see what is going on with project?
 [![Release][release-history-image]][release-history-url]
 
 ## Contributing
+
+Do you see bug or issue? Or maybe you want to improve this project?
 [![Contribute][contribute-me-image]][contribute-me-url]
 
 ## Copyrights
