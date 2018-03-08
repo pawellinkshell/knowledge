@@ -28,9 +28,17 @@
     </developers>
 
     <properties>
+        <assertj-core.version>RELEASE</assertj-core.version>
+        <assertj-guava.version>RELEASE</assertj-guava.version>
+        <assertj-joda-time.version>RELEASE</assertj-joda-time.version>
         <junit.version>RELEASE</junit.version>
         <hamcrest.version>RELEASE</hamcrest.version>
+
         <mockito.version>RELEASE</mockito.version>
+
+        <joda-time.version>RELEASE</joda-time.version>
+
+        <guava.version>RELEASE</guava.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -46,18 +54,50 @@
     </modules>
 
     <!-- Centrally manage all versions & transitive dependency versions -->
-    <dependencyManagement>
+    <!--<dependencyManagement>-->
         <dependencies>
+            <dependency>
+                <groupId>org.apache.maven</groupId>
+                <artifactId>maven-plugin-api</artifactId>
+                <version>2.0</version>
+            </dependency>
+
+            <!--Testing-->
+            <dependency>
+                <!--http://joel-costigliola.github.io/assertj/assertj-core-quick-start.html-->
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-core</artifactId>
+                <!-- use 2.9.0 for Java 7 projects -->
+                <version>${assertj-core.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <!--http://joel-costigliola.github.io/assertj/assertj-guava.html-->
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-guava</artifactId>
+                <!-- Use 2.x version if you rely on Java 7 / AssertJ Core 2.x -->
+                <version>${assertj-guava.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <!--http://joel-costigliola.github.io/assertj/assertj-joda-time.html-->
+                <groupId>org.assertj</groupId>
+                <artifactId>assertj-joda-time</artifactId>
+                <!-- use 1.1.0 for Java 7 projects -->
+                <version>${assertj-joda-time.version}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <!--http://site.mockito.org-->
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
+                <scope>test</scope>
+            </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
-                <scope>test</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.mockito</groupId>
-                <artifactId>mockito-all</artifactId>
-                <version>${mockito.version}</version>
                 <scope>test</scope>
             </dependency>
             <dependency>
@@ -66,13 +106,33 @@
                 <version>${hamcrest.version}</version>
                 <scope>test</scope>
             </dependency>
+
+            <!--Standard date and time-->
+            <dependency>
+                <!--http://www.joda.org/joda-time/-->
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
+            </dependency>
+
+            <!--Commons-->
+            <dependency>
+                <!--https://github.com/google/guava-->
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!--https://github.com/twitter/commons/tree/master/src/java/com/twitter/common-->
+            <!--https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md-->
+
         </dependencies>
-    </dependencyManagement>
+    <!--</dependencyManagement>-->
 
 
     <profiles>
         <profile>
-        <!--mvn clean install sonar:sonar-->
+            <!--mvn clean install sonar:sonar-->
             <id>sonar</id>
             <activation>
                 <activeByDefault>true</activeByDefault>
