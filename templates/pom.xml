@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>       <-- COPY_ME
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -6,11 +6,11 @@
 
     <groupId>pl.pawel.linkshell</groupId>
     <artifactId>_CHANGE_ME_</artifactId>
-    <version>0.1.0-SNAPSHOT</version>
-
+    <version>0.1.0</version>
     <packaging>jar</packaging>
-    <name>_CHANGE_ME_</name>
 
+      -->   COPY_BELOW   <--
+    <name>_CHANGE_ME_</name>
     <url>https://github.com/pawellinkshell/_CHANGE_ME_</url>
     <description>_CHANGE_ME_</description>
 
