@@ -1,17 +1,16 @@
 # Product Name
 > Short blurb about what your product does.
 
-[![NPM Version][npm-image]][npm-url]
+[![Quality Gate][sonar-quality-gate-image]][sonar-quality-gate-url]
+[![Coverage][sonar-coverage-image]][sonar-coverage-url]
+
 [![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
 
 TODO(Pawel): add `build` badge
 
-TODO(Pawel): add `coverage` badge
-
 TODO(Pawel): add `active` badge
 
-TODO(Pawel): add `version` badge
+TODO(Pawel): add `release` badge
 
 [![Code guide][code-guide-image]][code-guide-url]
 
@@ -80,10 +79,15 @@ Do you see bug or issue? Or maybe you want to improve this project?
 * [Chocolatey](https://chocolatey.org/)
 
 <!-- Markdown link & img dfn's -->
+<!-- Project info -->
+[sonar-quality-gate-image]: https://sonarcloud.io/api/badges/gate?key=pl.pawel.linkshell%3ASupermarket
+[sonar-quality-gate-url]: https://sonarcloud.io/dashboard?id=pl.pawel.linkshell%3ASupermarket
+
+[sonar-coverage-image]: https://sonarcloud.io/api/badges/measure?key=pl.pawel.linkshell%3ASupermarket&metric=coverage
+[sonar-coverage-url]: https://sonarcloud.io/component_measures?id=pl.pawel.linkshell%3ASupermarket&metric=coverage
+
+
 <!-- Top badges -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
 [wiki]: https://github.com/yourname/yourproject/wiki
