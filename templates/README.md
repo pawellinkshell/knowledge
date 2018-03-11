@@ -1,18 +1,20 @@
 # Product Name
 > Short blurb about what your product does.
 
+
+PROD: [![Website prod-pl-plinkshell-supermarket.herokuapp.com][website-up-down-prod-image]][website-up-down-prod-url]
+DEV: [![Website dev-pl-plinkshell-supermarket.herokuapp.com][website-up-down-dev-image]][website-up-down-dev-url]
+[![GitHub release][github-release-image]][github-release-url]
+[![Code guide][code-guide-image]][code-guide-url]
+
 [![Quality Gate][sonar-quality-gate-image]][sonar-quality-gate-url]
 [![Coverage][sonar-coverage-image]][sonar-coverage-url]
-
 [![Build Status][travis-image]][travis-url]
+
 
 TODO(Pawel): add `build` badge
 
 TODO(Pawel): add `active` badge
-
-TODO(Pawel): add `release` badge
-
-[![Code guide][code-guide-image]][code-guide-url]
 
 One to two paragraph statement about your product and what it does.
 
@@ -46,7 +48,6 @@ edit autoexec.bat
 ## Usage example
 
 A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
 _For more examples and usage, please refer to the [Wiki][wiki]._
 
 ## Development setup
@@ -80,12 +81,20 @@ Do you see bug or issue? Or maybe you want to improve this project?
 
 <!-- Markdown link & img dfn's -->
 <!-- Project info -->
-[sonar-quality-gate-image]: https://sonarcloud.io/api/badges/gate?key=pl.pawel.linkshell%3ASupermarket
+[sonar-quality-gate-image]: https://sonarcloud.io/api/project_badges/measure?project=pl.pawel.linkshell%3ASupermarket&metric=alert_status
 [sonar-quality-gate-url]: https://sonarcloud.io/dashboard?id=pl.pawel.linkshell%3ASupermarket
-
 [sonar-coverage-image]: https://sonarcloud.io/api/badges/measure?key=pl.pawel.linkshell%3ASupermarket&metric=coverage
 [sonar-coverage-url]: https://sonarcloud.io/component_measures?id=pl.pawel.linkshell%3ASupermarket&metric=coverage
 
+[website-up-down-prod-image]: https://img.shields.io/website-up-down-green-red/http/prod-pl-plinkshell-supermarket.herokuapp.com.svg
+[website-up-down-prod-url]: https://prod-pl-plinkshell-supermarket.herokuapp.com/
+
+[website-up-down-dev-image]: https://img.shields.io/website-up-down-green-red/http/dev-pl-plinkshell-supermarket.herokuapp.com.svg
+[website-up-down-dev-url]: https://dev-pl-plinkshell-supermarket.herokuapp.com/
+
+
+[github-release-image]: https://img.shields.io/github/release/pawellinkshell/Supermarket.svg
+[github-release-url]: https://github.com/pawellinkshell/Supermarket/releases/
 
 <!-- Top badges -->
 [travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
