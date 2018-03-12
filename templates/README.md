@@ -97,9 +97,11 @@ Do you see bug or issue? Or maybe you want to improve this project?
 [github-release-url]: https://github.com/pawellinkshell/Supermarket/releases/
 
 <!-- Top badges -->
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+[travis-image]: https://travis-ci.org/pawellinkshell/Supermarket.svg?branch=heroku
+[travis-url]: https://travis-ci.org/pawellinkshell/Supermarket
+
+[![Build Status](https://travis-ci.org/pawellinkshell/Supermarket.svg?branch=heroku)](https://travis-ci.org/pawellinkshell/Supermarket)
+
 
 [example-preview]: http://via.placeholder.com/700x400?text=Example+preview
 
