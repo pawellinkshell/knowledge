@@ -10,8 +10,8 @@
     <packaging>jar</packaging>
 
       -->   COPY_BELOW   <--
-    <name>_CHANGE_ME_</name>
-    <url>https://github.com/pawellinkshell/_CHANGE_ME_</url>
+    <name>${artifactId} _CHANGE_ME_</name>
+    <url>https://github.com/pawellinkshell/${artifactId}</url>
     <description>_CHANGE_ME_</description>
 
     <developers>
@@ -28,20 +28,27 @@
     </developers>
 
     <properties>
+        <!--For testing purposes-->    
         <assertj-core.version>RELEASE</assertj-core.version>
         <assertj-guava.version>RELEASE</assertj-guava.version>
         <assertj-joda-time.version>RELEASE</assertj-joda-time.version>
         <junit.version>RELEASE</junit.version>
         <hamcrest.version>RELEASE</hamcrest.version>
-
         <mockito.version>RELEASE</mockito.version>
 
+        <!--For better date purposes -->
         <joda-time.version>RELEASE</joda-time.version>
 
+        <!--Common utils-->
         <guava.version>RELEASE</guava.version>
-
+        <lombok.version>1.16.18</lombok.version>
+        
+        <!--For building purposes--> 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.dependency.version>3.0.2</maven.dependency.version>
+        <maven.compiler.version>3.7.0</maven.compiler.version>
+        <error.prone.version>RELEASE</error.prone.version>
         <java.version>1.8</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
@@ -122,6 +129,13 @@
                 <artifactId>guava</artifactId>
                 <version>${guava.version}</version>
             </dependency>
+                 
+            <dependency>
+               <groupId>org.projectlombok</groupId>
+               <artifactId>lombok</artifactId>
+               <version>${lombok.version}</version>
+               <scope>provided</scope>
+             </dependency>
 
             <!--https://github.com/twitter/commons/tree/master/src/java/com/twitter/common-->
             <!--https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md-->
@@ -129,6 +143,101 @@
         </dependencies>
     <!--</dependencyManagement>-->
 
+<build>
+    <!--How artifact will be named-->
+    <finalName>${artifactId}-${version}</finalName>
+
+    <plugins>
+
+      <!-- Static code analysis using 
+          `error-prone` from Google
+          `NullAway` from uber 
+         To analyze:                mvn clean install  
+         To see the result:         check console mvn build
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>${maven.compiler.version}</version>
+        <configuration>
+          <compilerId>javac-with-errorprone</compilerId>
+          <forceJavacCompilerUse>true</forceJavacCompilerUse>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+          <showWarnings>true</showWarnings>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>com.uber.nullaway</groupId>
+              <artifactId>nullaway</artifactId>
+              <version>0.3.0</version>
+            </path>
+          </annotationProcessorPaths>
+          <compilerArgs>
+            <arg>-Xep:NullAway:ERROR</arg>
+            <arg>-XepOpt:NullAway:AnnotatedPackages=com.uber</arg>
+          </compilerArgs>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>org.codehaus.plexus</groupId>
+            <artifactId>plexus-compiler-javac-errorprone</artifactId>
+            <version>2.8</version>
+          </dependency>
+          <!-- override plexus-compiler-javac-errorprone's dependency on
+               Error Prone with the latest version -->
+          <dependency>
+            <groupId>com.google.errorprone</groupId>
+            <artifactId>error_prone_core</artifactId>
+            <version>${error.prone.version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+             
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${maven.dependency.version}</version>
+        <executions>
+          <execution>
+            <id>copy-dependencies</id>
+            <phase>package</phase>
+            <goals>
+              <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+              <additionalProperties>
+                <encoding.source>${project.build.sourceEncoding}</encoding.source>
+                <encoding.reporting>${project.reporting.outputEncoding}</encoding.reporting>
+                <java.source>${maven.compiler.source}</java.source>
+                <java.target>${maven.compiler.target}</java.target>
+              </additionalProperties>
+            </configuration>
+          </execution>
+          <!-- For Heroku -->
+          <!--To build:    mvn clean install-->
+          <!--To run:      java -jar target/dependency/webapp-runner.jar target/*.war-->
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>com.github.jsimone</groupId>
+                  <artifactId>webapp-runner</artifactId>
+                  <version>8.5.27.0</version>
+                  <destFileName>webapp-runner.jar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+             
+    </plugins>
+         
+  </build>
 
     <profiles>
         <profile>
