@@ -10,8 +10,9 @@
     <packaging>jar</packaging>
 
       -->   COPY_BELOW   <--
-    <name>${artifactId} _CHANGE_ME_</name>
-    <url>https://github.com/pawellinkshell/${artifactId}</url>
+    <name>${project.artifactId} _CHANGE_ME_</name>
+    <inceptionYear>_CHANGE_ME_START_DATE_YEAR_</inceptionYear>
+    <url>https://github.com/pawellinkshell/${project.artifactId}</url>
     <description>_CHANGE_ME_</description>
 
     <developers>
@@ -26,6 +27,19 @@
             <organizationUrl>https://github.com/pawellinkshell</organizationUrl>
         </developer>
     </developers>
+
+    <modules>
+        <!--<module>project1</module>-->
+        <!--<module>project2</module>-->
+        <!--<module>project3</module>-->
+    </modules>
+
+	<scm>
+		<url>https://github.com/pawellinkshell/${project.artifactId}</url>
+		<connection>scm:git:https://github.com/pawellinkshell/${project.artifactId}.git</connection>
+		<developerConnection>scm:git:https://github.com/pawellinkshell/${project.artifactId}.git</developerConnection>
+		<tag></tag>
+	</scm>
 
     <properties>
         <!--For testing purposes-->    
@@ -54,21 +68,62 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
-    <modules>
-        <!--<module>project1</module>-->
-        <!--<module>project2</module>-->
-        <!--<module>project3</module>-->
-    </modules>
+    <!-- For super pom-->
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+        
+        <!-- COPY Below dependencies into each module if you want to use inside the module. Managing the version is on super pom -->
+        <dependency>
+            <!--http://joel-costigliola.github.io/assertj/assertj-core-quick-start.html-->
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+        </dependency>
+        <dependency>
+            <!--http://joel-costigliola.github.io/assertj/assertj-guava.html-->
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-guava</artifactId>
+        </dependency>
+        <dependency>
+            <!--http://joel-costigliola.github.io/assertj/assertj-joda-time.html-->
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-joda-time</artifactId>
+        </dependency>
+        <dependency>
+            <!--http://site.mockito.org-->
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+        </dependency>
+        <dependency>
+            <!--http://www.joda.org/joda-time/-->
+            <groupId>joda-time</groupId>
+            <artifactId>joda-time</artifactId> 
+        </dependency>
+        <dependency>
+            <!--https://github.com/google/guava-->
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>   
 
-    <!-- Centrally manage all versions & transitive dependency versions -->
-    <!--<dependencyManagement>-->
+    <!-- Centrally manage all versions for child pom's & transitive dependency versions -->
+    <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.apache.maven</groupId>
-                <artifactId>maven-plugin-api</artifactId>
-                <version>2.0</version>
-            </dependency>
-
             <!--Testing-->
             <dependency>
                 <!--http://joel-costigliola.github.io/assertj/assertj-core-quick-start.html-->
@@ -139,13 +194,12 @@
 
             <!--https://github.com/twitter/commons/tree/master/src/java/com/twitter/common-->
             <!--https://github.com/twitter/commons/blob/master/src/java/com/twitter/common/styleguide.md-->
-
         </dependencies>
-    <!--</dependencyManagement>-->
+    </dependencyManagement>
 
 <build>
     <!--How artifact will be named-->
-    <finalName>${artifactId}-${version}</finalName>
+    <finalName>${project.artifactId}-${project.version}</finalName>
 
     <plugins>
 
@@ -253,6 +307,11 @@
         </executions>
       </plugin>
              
+      <plugin>
+        <groupId>com.github.danielflower.mavenplugins</groupId>
+        <artifactId>multi-module-maven-release-plugin</artifactId>
+        <version>2.2.0</version>
+      </plugin>
     </plugins>
          
   </build>
