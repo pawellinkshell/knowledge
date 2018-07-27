@@ -10,7 +10,7 @@
     <packaging>jar</packaging>
 
       -->   COPY_BELOW   <--
-    <name>${project.artifactId} _CHANGE_ME_</name>
+    <name>${project.artifactId}</name>
     <inceptionYear>_CHANGE_ME_START_DATE_YEAR_</inceptionYear>
     <url>https://github.com/pawellinkshell/${project.artifactId}</url>
     <description>_CHANGE_ME_</description>
@@ -55,7 +55,7 @@
 
         <!--Common utils-->
         <guava.version>RELEASE</guava.version>
-        <lombok.version>1.16.18</lombok.version>
+        <lombok.version>1.18.2</lombok.version>
         
         <!--For building purposes--> 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -63,7 +63,7 @@
         <maven.dependency.version>3.0.2</maven.dependency.version>
         <maven.compiler.version>3.7.0</maven.compiler.version>
         <error.prone.version>RELEASE</error.prone.version>
-        <java.version>1.8</java.version>
+        <java.version>1.10</java.version>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
