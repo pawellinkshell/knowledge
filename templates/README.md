@@ -76,11 +76,13 @@ Do you see bug or issue? Or maybe you want to improve this project?
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[![Conduct][code-of-conduct-image]][code-of-conduct-url]
 
 ## Acknowledgments
+TODO
 * [Boxstarter](http://boxstarter.org)
 * [Chocolatey](https://chocolatey.org/)
 
 <!-- Markdown link & img dfn's -->
 <!-- Project info -->
+<!-- Start of CHANGE ME !!!! -->
 [sonar-quality-gate-image]: https://sonarcloud.io/api/project_badges/measure?project=pl.pawel.linkshell%3ASupermarket&metric=alert_status
 [sonar-quality-gate-url]: https://sonarcloud.io/dashboard?id=pl.pawel.linkshell%3ASupermarket
 [sonar-coverage-image]: https://sonarcloud.io/api/badges/measure?key=pl.pawel.linkshell%3ASupermarket&metric=coverage
@@ -102,8 +104,9 @@ Do you see bug or issue? Or maybe you want to improve this project?
 
 [![Build Status](https://travis-ci.org/pawellinkshell/Supermarket.svg?branch=heroku)](https://travis-ci.org/pawellinkshell/Supermarket)
 
-
 [example-preview]: http://via.placeholder.com/700x400?text=Example+preview
+<!-- End of CHANGE ME !!!! -->
+
 
 [code-style-image]: https://img.shields.io/badge/code%20style-google-yellow.svg
 [code-style-url]: https://github.com/google/styleguide/blob/gh-pages/intellij-java-google-style.xml
